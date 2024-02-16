@@ -272,11 +272,9 @@ class ExpandableTextState extends State<ExpandableText>
         }
 
         final richText = SelectableText.rich(
-          text: textSpan,
-          softWrap: true,
+          textSpan,
           textDirection: textDirection,
           textAlign: textAlign,
-          textScaleFactor: textScaleFactor,
           style: TextStyle(overflow: TextOverflow.clip),
         );
 
