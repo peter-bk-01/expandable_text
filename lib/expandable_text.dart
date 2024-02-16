@@ -271,11 +271,13 @@ class ExpandableTextState extends State<ExpandableText>
           textSpan = content;
         }
 
-        final richText = SelectableText.rich(
-          textSpan,
+        final richText = RichText(
+          text: textSpan,
+          softWrap: true,
           textDirection: textDirection,
           textAlign: textAlign,
-          style: TextStyle(overflow: TextOverflow.clip),
+          textScaleFactor: textScaleFactor,
+          overflow: TextOverflow.clip,
         );
 
         if (widget.animation) {
